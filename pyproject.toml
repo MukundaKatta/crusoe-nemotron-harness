@@ -1,0 +1,44 @@
+[build-system]
+requires = ["setuptools>=68", "wheel"]
+build-backend = "setuptools.build_meta"
+
+[project]
+name = "crusoe-nemotron-harness"
+version = "0.1.0"
+description = "Production harness for Nemotron agents on Crusoe Cloud Managed Inference: cost, egress allowlist, tool-arg vetting, snapshots, traces, and budget caps in one facade."
+readme = "README.md"
+requires-python = ">=3.10"
+license = { file = "LICENSE" }
+authors = [
+    { name = "Mukunda Katta", email = "mukunda.vjcs6@gmail.com" },
+]
+keywords = ["nemotron", "nvidia", "crusoe", "llm", "agent", "harness", "observability", "cost", "budget"]
+classifiers = [
+    "Development Status :: 4 - Beta",
+    "Intended Audience :: Developers",
+    "License :: OSI Approved :: MIT License",
+    "Programming Language :: Python :: 3",
+    "Programming Language :: Python :: 3.10",
+    "Programming Language :: Python :: 3.11",
+    "Programming Language :: Python :: 3.12",
+    "Topic :: Software Development :: Libraries",
+    "Topic :: Scientific/Engineering :: Artificial Intelligence",
+]
+dependencies = []
+
+[project.optional-dependencies]
+dev = [
+    "pytest>=7",
+]
+
+[project.urls]
+Homepage = "https://github.com/MukundaKatta/crusoe-nemotron-harness"
+Repository = "https://github.com/MukundaKatta/crusoe-nemotron-harness"
+Issues = "https://github.com/MukundaKatta/crusoe-nemotron-harness/issues"
+
+[tool.setuptools.packages.find]
+where = ["src"]
+
+[tool.pytest.ini_options]
+testpaths = ["tests"]
+addopts = "-q"
